@@ -7,19 +7,60 @@ const VoiceRSS={speech:function(e){this._validate(e),this._request(e)},_validate
 
 
 
-function test(){
+// function test(){
 
-    VoiceRSS.speech({
-        key: '4455dbfc2ca1472bbc3e0ab0465923cc',
-        src: 'Hi Charvi',
-        hl: 'en-us',
-        v: 'Linda',
-        r: 0, 
-        c: 'mp3',
-        f: '44khz_16bit_stereo',
-        ssml: false
-    });
+//     VoiceRSS.speech({
+//         key: '4455dbfc2ca1472bbc3e0ab0465923cc',
+//         src: 'Hi Charvi. You look tired? Wanna listen to a joke babe?',
+//         hl: 'en-us',
+//         v: 'Linda',
+//         r: 0, 
+//         c: 'mp3',
+//         f: '44khz_16bit_stereo',
+//         ssml: false
+//     });
 
-}
+// }
 
-test();
+// test();
+
+
+
+
+// Get Jokes from the API
+
+async function getJokes(){
+
+    let joke = '';
+    const apiURL = 'https://v2.jokeapi.dev/joke/Programming,Pun?blacklistFlags=nsfw,religious,political,racist,sexist,explicit'
+  try{
+    
+    const response = await fetch(apiURL);
+    const data = await response.json();
+    
+    if (data.setup){
+        joke = `${data.setup} ... ${data.delivery}`;
+    }
+
+    else
+    {
+        joke = data.joke;
+    }
+
+    console.log(joke);
+
+  } catch(error){
+
+
+    //This is the place to catch errors.
+    console.log('whoops', error )
+  }
+
+
+
+
+
+}//enf of getJokes() from API
+
+
+getJokes();
