@@ -79,7 +79,7 @@ async function getJokes(){
           toggleButton(); 
 
 
-          audioElement.addEventListener('ended', toggleButton);
+    audioElement.addEventListener('ended', toggleButton);
   } catch(error){
 
 
