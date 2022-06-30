@@ -36,7 +36,7 @@ function intro(){
 //Passing Joke to the voice API
 
 function tellMe(joke){
-    console.log('Tell me:' + joke);
+
     VoiceRSS.speech({
         key: '4455dbfc2ca1472bbc3e0ab0465923cc',
         src: joke,
