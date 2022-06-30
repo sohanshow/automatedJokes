@@ -30,8 +30,7 @@ function intro(){
         ssml: false
     });
 
-    if (button.disabled = false)
-       button.disabled = false;
+        touchPad.removeEventListener('click', intro, false);
   
   };
 
@@ -54,6 +53,7 @@ function tellMe(joke){
         f: '48Khz_16bit_stereo',
         ssml: false
     });
+
 }
 
 
@@ -105,6 +105,5 @@ window.onload = () => {
     alert('Please touch the robot');
 };
 touchPad.addEventListener('click', intro);
-touchPad.disabled = true;
 audioElement.addEventListener('ended', toggleButton);
 button.addEventListener('click', getJokes);
