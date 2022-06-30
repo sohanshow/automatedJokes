@@ -7,23 +7,39 @@ const VoiceRSS={speech:function(e){this._validate(e),this._request(e)},_validate
 
 
 
-// function test(){
+function test(){
 
-//     VoiceRSS.speech({
-//         key: '4455dbfc2ca1472bbc3e0ab0465923cc',
-//         src: 'Hi Charvi. You look tired? Wanna listen to a joke babe?',
-//         hl: 'en-us',
-//         v: 'Linda',
-//         r: 0, 
-//         c: 'mp3',
-//         f: '44khz_16bit_stereo',
-//         ssml: false
-//     });
+    VoiceRSS.speech({
+        key: '4455dbfc2ca1472bbc3e0ab0465923cc',
+        src: 'Hi Charvi. You look tired? Wanna listen to a joke babe?',
+        hl: 'en-us',
+        v: 'Linda',
+        r: 0, 
+        c: 'mp3',
+        f: '44khz_16bit_stereo',
+        ssml: false
+    });
 
-// }
+}
 
 // test();
 
+
+//Passing Joke to the voice API
+
+function tellMe(joke){
+    console.log('Tell me:' + joke);
+    VoiceRSS.speech({
+        key: '4455dbfc2ca1472bbc3e0ab0465923cc',
+        src: joke,
+        hl: 'en-us',
+        v: 'Linda',
+        r: 0, 
+        c: 'mp3',
+        f: '44khz_16bit_stereo',
+        ssml: false
+    });
+}
 
 
 
@@ -47,8 +63,7 @@ async function getJokes(){
         joke = data.joke;
     }
 
-    console.log(joke);
-
+    tellMe(joke);
   } catch(error){
 
 
