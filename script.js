@@ -11,10 +11,10 @@ function test(){
 
     VoiceRSS.speech({
         key: '4455dbfc2ca1472bbc3e0ab0465923cc',
-        src: 'Hi Charvi. You look tired? Wanna listen to a joke babe?',
+        src: 'Hi Charvi. You look tired? Sohan sent me to tell you some jokes. Just click on generate',
         hl: 'en-us',
         v: 'Linda',
-        r: 0, 
+        r: 1, 
         c: 'mp3',
         f: '44khz_16bit_stereo',
         ssml: false
@@ -33,10 +33,10 @@ function tellMe(joke){
         key: '4455dbfc2ca1472bbc3e0ab0465923cc',
         src: joke,
         hl: 'en-us',
-        v: 'Linda',
+        v:'Linda',
         r: 0, 
         c: 'mp3',
-        f: '44khz_16bit_stereo',
+        f: '48Khz_16bit_stereo',
         ssml: false
     });
 }
@@ -77,5 +77,8 @@ async function getJokes(){
 
 }//enf of getJokes() from API
 
+test();
 
-getJokes();
+
+//Event Listeners
+button.addEventListener('click', getJokes);
