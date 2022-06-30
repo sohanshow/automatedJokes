@@ -31,7 +31,7 @@ function intro(){
     });
 
     if (button.disabled = false)
-       button.disabled = true;
+       button.disabled = false;
   
   };
 
