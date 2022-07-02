@@ -107,3 +107,5 @@ window.onload = () => {
 touchPad.addEventListener('click', intro);
 audioElement.addEventListener('ended', toggleButton);
 button.addEventListener('click', getJokes);
+
+//End of script.
