@@ -109,3 +109,5 @@ audioElement.addEventListener('ended', toggleButton);
 button.addEventListener('click', getJokes);
 
 //End of script.
+
+// Streak maintanence.
