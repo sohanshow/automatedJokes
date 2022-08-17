@@ -21,7 +21,7 @@ function toggleButton(){
 function intro(){
   VoiceRSS.speech({
         key: '3e68a590da1d475f87e8591983f2b84e',
-        src: 'Hi Charvi. You look tired? Sohan sent me to tell you some jokes. Just click on Generate.',
+        src: 'Hi. You look tired? Sohan sent me to tell you some jokes. Just click on Generate.',
         hl: 'en-us',
         v: 'Linda',
         r: 1.5, 
